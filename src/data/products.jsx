@@ -69,6 +69,20 @@ const products = [
       price: 349.99,
       image: '/images/living-room-furniture-design-for-your-home.jpg',
       description: 'Comfortable recliner chair.'
+    },
+    {
+      id: 11,
+      name: 'Living room',
+      price: 349.99,
+      image: '/images/living-room-furniture-design-for-your-home.jpg',
+      description: 'Comfortable recliner chair.'
+    },
+    {
+      id: 12,
+      name: 'Living room',
+      price: 349.99,
+      image: '/images/living-room-furniture-design-for-your-home.jpg',
+      description: 'Comfortable recliner chair.'
     }
   ];
   
