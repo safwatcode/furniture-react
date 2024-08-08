@@ -1,14 +1,20 @@
-import React from 'react';
-import Product from './Product';
-import products from '../data/products';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import Product from "./Product";
+import products from "../data/products";
 
 const ProductList = () => {
   return (
-    <Container className='products-container' id='products'>
-      <Row>
-        {products.map(product => (
-          <Col key={product.id} sm={12} md={6} lg={4}>
+    <Container className="my-5">
+      <Row className="d-flex justify-content-center">
+        {products.map((product) => (
+          <Col
+            key={product.id}
+            sm={12}
+            md={6}
+            lg={4}
+            className="mb-4 d-flex justify-content-center"
+          >
             <Product product={product} />
           </Col>
         ))}
@@ -18,4 +24,3 @@ const ProductList = () => {
 };
 
 export default ProductList;
-
