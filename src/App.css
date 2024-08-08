@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif !important;
 }
@@ -767,4 +771,67 @@ body {
 
 .footer footer a:hover {
   color: #fff;
+}
+.footer .terms-links {
+  text-align: center;
+}
+.footer .terms-links a:first-of-type {
+  margin-right: 10px;
+}
+.footer .terms-links a:last-of-type {
+  margin-left: 10px;
+}
+
+/* Login */
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    #6b7c65,
+    #7a8f74,
+    #7ea570,
+    #80af6f,
+    #6fa75b
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    #6b7c65,
+    #7a8f74,
+    #7ea570,
+    #80af6f,
+    #6fa75b
+  );
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 100vh !important;
+  }
+}
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+  }
+}
+
+/* Register */
+@media (min-width: 1025px) {
+  .h-custom {
+    height: 100vh !important;
+  }
+}
+
+.gradient-custom-2 {
+  background: linear-gradient(to #6b7c65, #7a8f74, #7ea570, #7aac68, #70ad5a);
+}
+
+/* About */
+.gradient-custom-2 {
+  background: linear-gradient(to #6b7c65, #7a8f74, #7ea570, #7aac68, #70ad5a);
 }

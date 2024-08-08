@@ -6,8 +6,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigationbar from "./NavBar";
 import Home from "./Home";
 import Link from "./products";
-import About from "./about";
 import Contact from "./contact";
+import Aboutus from "./aboutus";
+import Loginform from "./login";
+import Rejester from "./rejester";
+import Forgotpassword from "./forgotpassword";
 
 function App() {
   return (
@@ -16,8 +19,11 @@ function App() {
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/products" element={<Link />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/login" element={<Loginform />} />
+        <Route path="/regester" element={<Rejester />} />
+        <Route path="/forgotpassword" element={<Forgotpassword />} />
       </Routes>
 
       {/* CRUD Operations */}

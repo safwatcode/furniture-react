@@ -1,9 +1,37 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
 import ProductList from "./components/ProductList";
-// import Image from "react-bootstrap/Image";
-// import Button from "react-bootstrap/Button";
+import products from "./data/products";
+
 function Link() {
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const handleSearch = (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    setSearchTerm(searchTerm);
+    const filteredProducts = products.filter((product) => {
+      return (
+        product.name.toLowerCase().includes(searchTerm) ||
+        product.description.toLowerCase().includes(searchTerm)
+      );
+    });
+    setFilteredProducts(filteredProducts);
+  };
+
+  const handleCategoryChange = (e) => {
+    const selectedCategory = e.target.value;
+    setSelectedCategory(selectedCategory);
+    if (selectedCategory === "All") {
+      setFilteredProducts(products);
+    } else {
+      const filteredProducts = products.filter((product) => {
+        return product.category === selectedCategory;
+      });
+      setFilteredProducts(filteredProducts);
+    }
+  };
+
   return (
     <div>
       <div className="landing-prodcuts">
@@ -27,8 +55,28 @@ function Link() {
           </main>
         </div>
       </div>
-
-      <ProductList />
+      <div class="flex justify-center mb-4">
+        <input
+          type="search"
+          value={searchTerm}
+          onChange={handleSearch}
+          placeholder="Search products"
+          class="w-full max-w-md px-4 py-2 text-lg text-gray-700"
+        />
+        <select
+          value={selectedCategory}
+          onChange={handleCategoryChange}
+          class="w-full max-w-md px-4 py-2 text-lg text-gray-700"
+        >
+          <option value="All">All Categories</option>
+          {[...new Set(products.map((product) => product.category))].map(
+            (category) => (
+              <option value={category}>{category}</option>
+            )
+          )}
+        </select>
+      </div>
+      <ProductList products={filteredProducts} />
     </div>
   );
 }

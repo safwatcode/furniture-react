@@ -5,6 +5,7 @@ const products = [
     price: 299.99,
     image: "/images/Somerville3str_45 (1).webp",
     description: "Comfortable sofa with modern design.",
+    category: "Furniture",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ const products = [
     price: 89.99,
     image: "/images/s-l1200.webp",
     description: "Modern bookshelf with plenty of space.",
+    category: "Furniture",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ const products = [
     price: 149.99,
     image: "/images/atkin_march_2020_007_1.jpg",
     description: "Stylish armchair perfect for any living room.",
+    category: "Furniture",
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ const products = [
     price: 699.99,
     image: "/images/30708463.webp",
     description: "Comfortable king size bed with storage.",
+    category: "Furniture",
   },
 
   {
@@ -34,6 +38,7 @@ const products = [
     price: 89.99,
     image: "/images/bh2r-f_-1.4_bh1s-f1_2__1_copy.jpg",
     description: "Modern bookshelf with plenty of space.",
+    category: "Furniture",
   },
   {
     id: 6,
@@ -41,6 +46,7 @@ const products = [
     price: 199.99,
     image: "/images/81WeJ37mUaL._AC_UF894,1000_QL80_.jpg",
     description: "Elegant coffee table for your living room.",
+    category: "Decor",
   },
   {
     id: 7,
@@ -48,6 +54,7 @@ const products = [
     price: 399.99,
     image: "/images/wooden-wardrobe-manufacturer-500x500.webp",
     description: "Spacious wardrobe with sliding doors.",
+    category: "Decor",
   },
   {
     id: 8,
@@ -56,6 +63,7 @@ const products = [
     image:
       "/images/small-desks-4155171-hero-faaa214445524b4485f9aa1cee5fbc2e.jpg",
     description: "Functional desk for home office.",
+    category: "Decor",
   },
   {
     id: 9,
@@ -64,6 +72,7 @@ const products = [
     image:
       "/images/cuppaTVstand_gallery_2_890c2c14-079c-4e4a-9b37-5ece0bb9096c.webp",
     description: "Stylish TV stand with storage.",
+    category: "Decor",
   },
   {
     id: 10,
@@ -71,6 +80,7 @@ const products = [
     price: 349.99,
     image: "/images/living-room-furniture-design-for-your-home.jpg",
     description: "Comfortable recliner chair.",
+    category: "Furniture",
   },
   {
     id: 11,
@@ -78,6 +88,7 @@ const products = [
     price: 349.99,
     image: "/images/1_27c2bcf9-e2a0-4717-a47e-8d20f2924e5f.webp",
     description: "Comfortable recliner chair.",
+    category: "Salon",
   },
   {
     id: 12,
@@ -85,6 +96,7 @@ const products = [
     price: 89.99,
     image: "/images/quinn-closed-3-drawer-nightstand-28-m.jpg",
     description: "Elegant nightstand with drawers.",
+    category: "Salon",
   },
   {
     id: 13,
@@ -92,6 +104,7 @@ const products = [
     price: 129.99,
     image: "/images/T03896_Square_01.webp",
     description: "Stylish bar stool for kitchen island.",
+    category: "Salon",
   },
   {
     id: 14,
@@ -100,6 +113,7 @@ const products = [
     image:
       "/images/Better-Homes-Gardens-Bellamy-Round-Wicker-Outdoor-Egg-Chair-Beige_d760ba77-8602-4b49-bfa2-2277a0602aa4.18557eefc0fc9ccb9f8a321646d417bf.avif",
     description: "Durable outdoor chair for patio.",
+    category: "Salon",
   },
   {
     id: 15,
@@ -107,6 +121,7 @@ const products = [
     price: 199.99,
     image: "/images/download (1).jpeg",
     description: "Sleek console table for entryway.",
+    category: "Salon",
   },
 ];
 

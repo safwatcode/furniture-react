@@ -43,28 +43,21 @@ function Home() {
           </div>
         </div>
       </div>
-    
+     
 
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* <div className="footer">
+      <div className="footer">
         <div class="container">
           <div class="content">
             <div class="logo">
-              <img src="logo.png" alt="Logo" />
-              <h1>Wardiere Inc.</h1>
+              <img
+                src="/images/realistic-modern-stylish-golden-white-standard-lamp-vector-illustration.png"
+                alt="Logo"
+              />
+              <h1>Homes Furniture Co.</h1>
             </div>
-            <p>Stay in the loop and sign up for the Wardiere newsletter:</p>
+            <p>
+              Stay in the loop and sign up for the Homes Furniture newsletter:
+            </p>
             <div class="input-group">
               <input type="email" placeholder="Enter your email" />
               <button>→</button>
@@ -72,22 +65,16 @@ function Home() {
             <div class="links">
               <ul>
                 <li>
-                  <a href="#">Home</a>
+                  <a href="/home">Home</a>
                 </li>
                 <li>
-                  <a href="#">About</a>
+                  <a href="/products">Products</a>
                 </li>
                 <li>
-                  <a href="#">Solutions</a>
+                  <a href="#aboutus">About</a>
                 </li>
                 <li>
-                  <a href="#">Pricing</a>
-                </li>
-                <li>
-                  <a href="#">Team</a>
-                </li>
-                <li>
-                  <a href="#">Career</a>
+                  <a href="#contactus">Contact</a>
                 </li>
               </ul>
               <ul>
@@ -95,37 +82,34 @@ function Home() {
                   <a href="#">Help Centre</a>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
-                </li>
-                <li>
                   <a href="#">FAQ</a>
-                </li>
-                <li>
-                  <a href="#">Privacy Policy</a>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <a href="#">Facebook</a>
+                  <a href="https://www.facebook.com">Facebook</a>
                 </li>
                 <li>
-                  <a href="#">Instagram</a>
+                  <a href="https://www.instagram.com">Instagram</a>
                 </li>
                 <li>
-                  <a href="#">Youtube</a>
+                  <a href="https://www.youtube.com">Youtube</a>
                 </li>
                 <li>
-                  <a href="#">Twitter</a>
+                  <a href="https://www.x.com">Twitter</a>
                 </li>
               </ul>
             </div>
             <footer>
-              © Wardiere Inc. All Rights Reserved 2023 <br />
-              <a href="#">Terms & Conditions</a>
+              © Homes Furniture Co. All Rights Reserved 2024 <br />
+              <div className="terms-links">
+                <a href="#">Terms & Conditions</a> |
+                <a href="#"> Privacy Policy</a>
+              </div>
             </footer>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

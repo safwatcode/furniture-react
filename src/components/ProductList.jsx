@@ -1,9 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Product from "./Product";
-import products from "../data/products";
 
-const ProductList = () => {
+const ProductList = ({ products }) => {
   return (
     <Container className="my-5">
       <Row className="d-flex justify-content-center">
