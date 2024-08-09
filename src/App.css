@@ -1,4 +1,7 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Freehand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Freehand&family=Palanquin+Dark:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Freehand&family=Palanquin+Dark:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -56,11 +59,17 @@ body {
   color: white !important;
   font-size: 12px !important;
 }
-
 .brand-name {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 24px !important;
+  /* font-family: "Palanquin Dark", sans-serif; */
+  font-family: "Anton SC", sans-serif;
+  text-transform: capitalize;
+  /* font-weight: bold; */
+  /* letter-spacing: 5px; */
+  font-size: 30px !important;
+}
+.logo-img {
+  width: 50px;
+  margin-bottom: 10px;
 }
 
 .brand-name:hover {
@@ -68,7 +77,7 @@ body {
 }
 .nav-bar {
   background-color: #6b7c65;
-  padding-top: 30px;
+  padding: 25px;
 }
 
 .nav-bar a {
@@ -81,12 +90,13 @@ body {
 }
 
 .landing-container {
-  height: 80vh;
+  height: 60vh;
   background-color: #6b7c65;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 200px;
 }
 
 .landing-header {
@@ -118,16 +128,23 @@ body {
   color: white !important;
 }
 .reg-btn {
-  border: 2px solid white;
+  /* border: 2px solid white; */
   color: white;
-  background-color: #6b7c65;
+  background: linear-gradient(
+    to right,
+    #6b7c65,
+    #7a8f74,
+    #7ea570,
+    #80af6f,
+    #6fa75b
+  );
   width: 100px;
   text-align: center;
 }
 .reg-btn:hover {
   background-color: #444e40;
   color: white;
-  border: 2px solid #444e40;
+  /* border: 2px solid #444e40; */
 }
 .sign-btn {
   width: 100px;
@@ -704,6 +721,7 @@ body {
 
 .footer .input-group {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
@@ -715,9 +733,12 @@ body {
   background-color: #383838;
   color: #fff;
   font-size: 1rem;
-  width: 100%;
+  flex-grow: 1;
 }
-
+.footer input[type="email"]:focus {
+  border: none;
+  outline: none;
+}
 .footer button {
   padding: 10px 20px;
   border: none;
@@ -834,4 +855,53 @@ body {
 /* About */
 .gradient-custom-2 {
   background: linear-gradient(to #6b7c65, #7a8f74, #7ea570, #7aac68, #70ad5a);
+}
+
+/* Filteriation */
+.search-filter {
+  margin: 50px;
+  width: 50%;
+}
+.search-filter > input,
+.search-filter > select {
+  border: 2px solid black;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.search-filter > select {
+  margin-left: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.search-filter > input:focus,
+.search-filter > select:focus {
+  border: 2px solid #6b7c65;
+  outline: none;
+}
+.card {
+  overflow: hidden;
+  transition: 0.3s;
+}
+.card > img {
+  width: 300px;
+  height: 200px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.card > img:hover {
+  transform: scale(1.05);
+}
+.ab {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding-inline: 20px;
+}
+.ab .card {
+  width: 400px;
+  height: 400px;
+  margin: 20px 10px;
 }

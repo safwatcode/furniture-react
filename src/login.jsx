@@ -29,12 +29,12 @@ export default function Loginform() {
     }
 
     if (valid) {
-      navigate("/about");
+      navigate("/home");
     }
   };
 
   const handleRejester = () => {
-    navigate("/rejester");
+    navigate("/regester");
   };
 
   return (
@@ -98,7 +98,7 @@ export default function Loginform() {
                           </button>
                         </div>
                         <Link
-                          to={"/forgot"}
+                          to={"/forgotpassword"}
                           className="text-muted text-center d-flex align-items-center justify-content-center "
                         >
                           Forgot password?

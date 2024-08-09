@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProductList from "./components/ProductList";
 import products from "./data/products";
+import Container from "react-bootstrap/Container";
 
 function Link() {
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -55,7 +56,8 @@ function Link() {
           </main>
         </div>
       </div>
-      <div class="flex justify-center mb-4">
+      <Container className="container">
+      <div class="flex justify-center mb-4 search-filter">
         <input
           type="search"
           value={searchTerm}
@@ -71,11 +73,12 @@ function Link() {
           <option value="All">All Categories</option>
           {[...new Set(products.map((product) => product.category))].map(
             (category) => (
-              <option value={category}>{category}</option>
+              <option value={category} className="opt">{category}</option>
             )
           )}
         </select>
       </div>
+      </Container>
       <ProductList products={filteredProducts} />
     </div>
   );

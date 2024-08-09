@@ -5,7 +5,7 @@ import Product from "./Product";
 const ProductList = ({ products }) => {
   return (
     <Container className="my-5">
-      <Row className="d-flex justify-content-center">
+      <Row className="w-full d-flex justify-content-around flex-wrap">
         {products.map((product) => (
           <Col
             key={product.id}

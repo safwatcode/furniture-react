@@ -99,13 +99,13 @@ export default function Rejester() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-6 mb-5">
+                    {/* <div className="col-md-6 mb-5">
                       <select data-mdb-select-init="">
                         <option>Gender</option>
                         <option value={2}>Female</option>
                         <option value={3}>Male</option>
                       </select>
-                    </div>
+                    </div> */}
                     <button
                       type="button"
                       data-mdb-button-init=""
@@ -118,7 +118,7 @@ export default function Rejester() {
                     <div>
                       <p>
                         Have already account ?
-                        <Link to={"/"} className="ps-2">
+                        <Link to={"/login"} className="ps-2">
                           Sign in{" "}
                         </Link>
                       </p>
