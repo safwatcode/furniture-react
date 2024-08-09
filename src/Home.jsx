@@ -8,6 +8,7 @@ import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 import img1 from "./assets/e9e264209af614995c117ff7ae9077cc.jpg";
 import img2 from "./assets/685d36e8fdacbbd5d79f508f58788bb4.jpg";
+import ContactUs from "./ContactUs";
 
 function Home() {
   return (
@@ -163,7 +164,7 @@ function Home() {
                 <img
                   className="card-img-top img-fluid"
                   loading="lazy"
-                  src={img1}
+                  src="/images/r-architecture-TRCJ-87Yoh0-unsplash-26bc30ad721b4e398b699e75cb7020f4.jpg"
                   alt="Our Approach"
                   style={{
                     width: "100%",
@@ -181,11 +182,10 @@ function Home() {
                     </h2>
                   </div>
                   <p className="card-text entry-summary text-secondary mb-3">
-                    We believe that a home is more than
-                    just a place to live - it's a reflection of who you are.
-                    That's why we're dedicated to helping you create a space
-                    that's not only beautiful, but also functional and
-                    meaningful.
+                    We believe that a home is more than just a place to live -
+                    it's a reflection of who you are. That's why we're dedicated
+                    to helping you create a space that's not only beautiful, but
+                    also functional and meaningful.
                   </p>
                 </div>
               </div>
@@ -193,6 +193,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <ContactUs />
 
       <div className="footer">
         <div class="container">

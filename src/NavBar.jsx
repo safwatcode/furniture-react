@@ -9,7 +9,7 @@ function Navigationbar() {
   return (
     <Navbar expand="lg" className="nav-bar">
       <Container className="nav-container">
-        {/* <img src="/images/test-logo2.jpg" alt="logo" className="logo-img" /> */}
+        <img src="/images/homes-logo2.png" alt="logo" className="logo-img" />
         <Navbar.Brand href="/home" className="brand-name">
           Homes Furniture
         </Navbar.Brand>
@@ -25,7 +25,7 @@ function Navigationbar() {
             <Nav.Link as={RouterLink} to="/aboutus">
               About
             </Nav.Link>
-            <Nav.Link as={RouterLink} to="#contactus">
+            <Nav.Link as={RouterLink} to="/ContactUs">
               Contact us
             </Nav.Link>
             <div className="reg-buttons">

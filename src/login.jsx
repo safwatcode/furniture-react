@@ -119,8 +119,9 @@ export default function Loginform() {
                       </form>
                     </div>
                   </div>
-                  <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
+                  <div className="login-text col-lg-6 d-flex align-items-center gradient-custom-2">
                     <div className="text-white px-3 py-4 p-md-5 mx-md-4">
+                      <img className="login-img" src="./images/T03896_Square_01.webp" alt="" />
                       <h4 className="mb-4">We are more than just a company</h4>
                       <p className="small mb-0">
                         Over Hundreds of products with highest variety of

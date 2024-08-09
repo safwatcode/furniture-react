@@ -25,7 +25,7 @@ export default function Rejester() {
       setErrorPassword("");
     }
     if (valid) {
-      navigate("/");
+      navigate("/home");
     }
   };
 
@@ -99,27 +99,20 @@ export default function Rejester() {
                         </div>
                       </div>
                     </div>
-                    {/* <div className="col-md-6 mb-5">
-                      <select data-mdb-select-init="">
-                        <option>Gender</option>
-                        <option value={2}>Female</option>
-                        <option value={3}>Male</option>
-                      </select>
-                    </div> */}
                     <button
                       type="button"
                       data-mdb-button-init=""
                       data-mdb-ripple-init=""
-                      className="btn btn-primary btn-lg btn-block fa-lg gradient-custom-2 mb-3"
+                      className="btn sub-btn btn-primary btn-lg btn-block fa-lg gradient-custom-2 mb-3"
                       onClick={handleRej}
                     >
                       Submit
                     </button>
-                    <div>
+                    <div className="sub-text">
                       <p>
-                        Have already account ?
+                        Already have an account ?
                         <Link to={"/login"} className="ps-2">
-                          Sign in{" "}
+                          Sign in
                         </Link>
                       </p>
                     </div>

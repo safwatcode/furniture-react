@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigationbar from "./NavBar";
 import Home from "./Home";
 import Link from "./products";
-import Contact from "./contact";
+import ContactUs from "./ContactUs";
 import Aboutus from "./aboutus";
 import Loginform from "./login";
 import Rejester from "./rejester";
@@ -20,7 +20,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/products" element={<Link />} />
         <Route path="/aboutus" element={<Aboutus />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/login" element={<Loginform />} />
         <Route path="/regester" element={<Rejester />} />
         <Route path="/forgotpassword" element={<Forgotpassword />} />
