@@ -61,6 +61,7 @@ function Home() {
               <button
                 type="button"
                 className="btn btn-lg mb-3 mb-md-4 mb-xl-5"
+                to = "/products"
                 style={{
                   transition: "0.3s",
                   backgroundColor: "#6b7c65",
