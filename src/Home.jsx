@@ -47,7 +47,6 @@ function Home() {
         </div>
       </div>
 
-
       <section className="py-3 py-md-5 py-xl-8" id="aboutus">
         <div className="container">
           <div className="row">
@@ -195,6 +194,7 @@ function Home() {
           </div>
         </div>
       </section>
+
 
       <ContactUs />
     </div>
