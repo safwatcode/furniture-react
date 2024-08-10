@@ -48,7 +48,7 @@ export default function Forgotpassword() {
                               </div>
                             </div>
                           </div>
-                          <form action="#!">
+                          <form action="" method="POST">
                             <div className="row gy-3 overflow-hidden">
                               <div className="col-12">
                                 <div className="form-floating mb-3">
@@ -71,7 +71,7 @@ export default function Forgotpassword() {
                                     className="btn btn-primary btn-lg btn-block fa-lg gradient-custom-2 mb-3"
                                     type="submit"
                                   >
-                                    Reset Password
+                                    <a href="./home">Reset Password</a>
                                   </button>
                                 </div>
                               </div>

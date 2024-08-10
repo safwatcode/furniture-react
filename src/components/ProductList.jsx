@@ -14,7 +14,7 @@ const ProductList = ({ products }) => {
             sm={12}
             md={6}
             lg={4}
-            className="mb-4 d-flex justify-content-center"
+            className="mb-4 d-flex justify-content-center card-p"
           >
             <Product product={product} />
           </Col>

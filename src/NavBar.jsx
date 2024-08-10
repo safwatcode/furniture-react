@@ -36,15 +36,6 @@ function Navigationbar() {
                 Register
               </Nav.Link>
             </div>
-
-            {/* <div className="buttons">
-              <Button href="./products" target="_blank" className="explore-btn">
-                Buy Now!
-              </Button>
-              <Button href="./products"  className="explore-btn">
-                Explore
-              </Button>
-            </div> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -53,6 +44,3 @@ function Navigationbar() {
 }
 
 export default Navigationbar;
-
-//         <Nav.Link as={RouterLink} to="/home">Home</Nav.Link>
-/* <Nav.Link as={RouterLink} to="/products">Link</Nav.Link> */
