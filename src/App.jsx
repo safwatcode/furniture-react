@@ -56,10 +56,10 @@ function App() {
                   <a href="/products">Products</a>
                 </li>
                 <li>
-                  <a href="#aboutus">About</a>
+                  <a href="/aboutus">About</a>
                 </li>
                 <li>
-                  <a href="#contactus">Contact</a>
+                  <a href="/ContactUs">Contact</a>
                 </li>
               </ul>
               <ul>

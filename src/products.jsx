@@ -56,7 +56,6 @@ function Link() {
           </main>
         </div>
       </div>
-      <Container className="container">
       <div class="flex justify-center mb-4 search-filter">
         <input
           type="search"
@@ -78,7 +77,6 @@ function Link() {
           )}
         </select>
       </div>
-      </Container>
       <ProductList products={filteredProducts} />
     </div>
   );

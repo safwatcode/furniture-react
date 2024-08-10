@@ -24,8 +24,9 @@ const ContactUs = () => {
   return (
     <div className="contact-wrapper">
       <div className="contact-image">
-        <img src="/images/homes-logo2.png" alt="Contact Us" />
+        <img src="/images/Green Modern Minimal Home Decor Logo.svg" alt="Contact Us" />
       </div>
+
       <div className="contact-container">
         <h1>Contact Us</h1>
         <form onSubmit={handleSubmit}>

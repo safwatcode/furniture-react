@@ -69,7 +69,6 @@ body {
 }
 .logo-img {
   width: 50px;
-  margin-bottom: 10px;
 }
 
 .brand-name:hover {
@@ -97,6 +96,37 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 200px;
+}
+@media (max-width: 576px) {
+  /* Landing Page */
+  .landing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .landing-container .images {
+    display: none;
+  }
+  .landing-container .text-container {
+    width: 100%;
+    padding: 50px;
+  }
+  .contact-wrapper {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-wrapper .contact-image {
+    display: none;
+  }
+  .contact-wrapper .contact-container {
+    width: 100%;
+  }
+}
+
+/* Register */
+@media (min-width: 1025px) {
 }
 
 .landing-header {
@@ -859,7 +889,7 @@ body {
 
 /* Filteriation */
 .search-filter {
-  margin: 50px;
+  margin: 50px auto;
   width: 50%;
 }
 .search-filter > input,
@@ -1029,9 +1059,17 @@ body {
 .users-read ul button {
   font-size: 16px;
   color: white;
-  background: linear-gradient(to right, #6b7c65, #7a8f74, #7ea570, #80af6f, #6fa75b);
+  background: linear-gradient(
+    to right,
+    #6b7c65,
+    #7a8f74,
+    #7ea570,
+    #80af6f,
+    #6fa75b
+  );
   border: none;
   outline: none;
   padding: 5px 10px;
   border-radius: 6px;
+  margin-right: 20px;
 }

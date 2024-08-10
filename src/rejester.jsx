@@ -211,6 +211,7 @@ export default function Rejester() {
                 {user.name} <br /> {user.email}
               </p>
               <button onClick={() => handleUpdate(user.id)}>Update</button>
+              <button onClick={() => handleDelete(user.id)}>Delete</button>
             </li>
           ))}
         </ul>

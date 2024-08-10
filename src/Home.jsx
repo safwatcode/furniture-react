@@ -47,6 +47,7 @@ function Home() {
         </div>
       </div>
 
+
       <section className="py-3 py-md-5 py-xl-8" id="aboutus">
         <div className="container">
           <div className="row">
@@ -61,7 +62,7 @@ function Home() {
               <button
                 type="button"
                 className="btn btn-lg mb-3 mb-md-4 mb-xl-5"
-                to = "/products"
+                to="/products"
                 style={{
                   transition: "0.3s",
                   backgroundColor: "#6b7c65",
@@ -196,7 +197,6 @@ function Home() {
       </section>
 
       <ContactUs />
-
     </div>
   );
 }
