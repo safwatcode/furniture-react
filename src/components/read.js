@@ -6,11 +6,19 @@ import { Link } from "react-router-dom";
 
 export default function Read() {
   const [APIData, setAPIData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     axios
       .get(`https://66afdb096a693a95b5375747.mockapi.io/DummyData`)
       .then((response) => {
         setAPIData(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error.message);
+        setLoading(false);
       });
   }, []);
 
@@ -38,6 +46,14 @@ export default function Read() {
       });
   };
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <div>
       <Table singleLine textAlign="center">
@@ -54,7 +70,7 @@ export default function Read() {
         <Table.Body>
           {APIData.map((data) => {
             return (
-              <Table.Row>
+              <Table.Row key={data.id}>
                 <Table.Cell>{data.firstName}</Table.Cell>
                 <Table.Cell>{data.lastName}</Table.Cell>
                 <Table.Cell>

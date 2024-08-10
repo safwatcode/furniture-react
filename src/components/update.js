@@ -1,59 +1,100 @@
 import React, { useState, useEffect } from "react";
-import { Button, Checkbox, Form } from "semantic-ui-react";
+import { Button, Form } from "semantic-ui-react";
 import axios from "axios";
-
+import { Link, useParams } from "react-router-dom";
 
 export default function Update() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [checkbox, setCheckbox] = useState(false);
-
-  const [id, setID] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const { id } = useParams();
 
   useEffect(() => {
-    setID(localStorage.getItem("ID"));
-    setFirstName(localStorage.getItem("First Name"));
-    setLastName(localStorage.getItem("Last Name"));
-    setCheckbox(localStorage.getItem("Checkbox Value"));
-  }, []);
+    axios
+      .get(`https://66afdb096a693a95b5375747.mockapi.io/DummyData/${id}`)
+      .then((response) => {
+        setName(response.data.name);
+        setEmail(response.data.email);
+        setPassword(response.data.password);
+      });
+  }, [id]);
 
-  const updateAPIData = () => {
-    axios.put(`https://66afdb096a693a95b5375747.mockapi.io/DummyData/${id}`, {
-      firstName,
-      lastName,
-      checkbox,
-    });
+  const handleUpdate = () => {
+    let valid = true;
+    if (name === "") {
+      setNameError("Name is required");
+      valid = false;
+    } else {
+      setNameError("");
+    }
+    if (email === "") {
+      setEmailError("Email is required");
+      valid = false;
+    } else {
+      setEmailError("");
+    }
+    if (password === "") {
+      setPasswordError("Password is required");
+      valid = false;
+    } else {
+      setPasswordError("");
+    }
+    if (valid) {
+      axios
+        .put(`https://66afdb096a693a95b5375747.mockapi.io/DummyData/${id}`, {
+          name,
+          email,
+          password,
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
   };
 
   return (
     <div>
-      <Form className="create-form">
+      <Form className="update-form">
         <Form.Field>
-          <label>First Name</label>
+          <label>Name</label>
           <input
-            placeholder="First Name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
+          {nameError && <div className="text-danger">{nameError}</div>}
         </Form.Field>
         <Form.Field>
-          <label>Last Name</label>
+          <label>Email</label>
           <input
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
+          {emailError && <div className="text-danger">{emailError}</div>}
         </Form.Field>
         <Form.Field>
-          <Checkbox
-            label="I agree to the Terms and Conditions"
-            checked={checkbox}
-            onChange={(e) => setCheckbox(!checkbox)}
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
+          {passwordError && <div className="text-danger">{passwordError}</div>}
         </Form.Field>
-        <Button type="submit" onClick={updateAPIData}>
+        <Button onClick={handleUpdate} type="submit">
           Update
         </Button>
+        <Link to="/read">
+          <Button>Back to List</Button>
+        </Link>
       </Form>
     </div>
   );

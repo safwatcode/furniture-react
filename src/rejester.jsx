@@ -1,14 +1,32 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import sampleImage from "./assets/1d9ac3aa96050420f6782fd1738290d4.jpg";
+import axios from "axios";
+import Read from "../src/components/read";
+// import "./App.css"
 
 export default function Rejester() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const [emailError, setErrorEmail] = useState("");
   const [passwordError, setErrorPassword] = useState("");
+  const [users, setUsers] = useState([]);
+  const [isUpdate, setIsUpdate] = useState(false);
+  const [updateId, setUpdateId] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("https://66afdb096a693a95b5375747.mockapi.io/DummyData")
+      .then((response) => {
+        setUsers(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   const handleRej = () => {
     let valid = true;
@@ -25,8 +43,60 @@ export default function Rejester() {
       setErrorPassword("");
     }
     if (valid) {
-      navigate("/home");
+      if (isUpdate) {
+        axios
+          .put(
+            `https://66afdb096a693a95b5375747.mockapi.io/DummyData/${updateId}`,
+            {
+              name,
+              email,
+              password,
+            }
+          )
+          .then((response) => {
+            console.log(response);
+            navigate("/home");
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      } else {
+        axios
+          .post("https://66afdb096a693a95b5375747.mockapi.io/DummyData", {
+            name,
+            email,
+            password,
+          })
+          .then((response) => {
+            console.log(response);
+            navigate("/home");
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
     }
+  };
+
+  const handleUpdate = (id) => {
+    setIsUpdate(true);
+    setUpdateId(id);
+    const user = users.find((user) => user.id === id);
+    setName(user.name);
+    setEmail(user.email);
+    setPassword(user.password);
+  };
+
+  const handleDelete = (id) => {
+    axios
+      .delete(`https://66afdb096a693a95b5375747.mockapi.io/DummyData/${id}`)
+      .then((response) => {
+        console.log(response);
+        setUsers(users.filter((user) => user.id !== id));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
@@ -59,6 +129,8 @@ export default function Rejester() {
                         id="form3Example1q"
                         className="form-control"
                         placeholder="Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                       />
                     </div>
                     <div className="col">
@@ -76,7 +148,11 @@ export default function Rejester() {
                             onChange={(e) => setEmail(e.target.value)}
                           />
                           {emailError && (
-                            <div className="text-danger">{emailError}</div>
+                            <div className="text-danger">
+                              {emailError && (
+                                <div className="text-danger">{emailError}</div>
+                              )}
+                            </div>
                           )}
                         </div>
                       </div>
@@ -86,7 +162,7 @@ export default function Rejester() {
                       <div className="form-outline mb-1">
                         <div data-mdb-input-init="" className="form-outline">
                           <input
-                            type="text"
+                            type="password"
                             id="form3Example1w"
                             className="form-control"
                             placeholder="Password"
@@ -106,7 +182,7 @@ export default function Rejester() {
                       className="btn sub-btn btn-primary btn-lg btn-block fa-lg gradient-custom-2 mb-3"
                       onClick={handleRej}
                     >
-                      Submit
+                      {isUpdate ? "Update" : "Submit"}
                     </button>
                     <div className="sub-text">
                       <p>
@@ -122,6 +198,21 @@ export default function Rejester() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* <Read /> */}
+      <section className="users-read">
+        <h2>Users List</h2>
+        <ul>
+          {users.map((user) => (
+            <li key={user.id}>
+              <p>
+                {user.name} <br /> {user.email}
+              </p>
+              <button onClick={() => handleUpdate(user.id)}>Update</button>
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   );

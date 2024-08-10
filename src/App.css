@@ -979,6 +979,9 @@ body {
   color: #fff;
   text-decoration: none;
 }
+.btn-submit a:hover {
+  color: #f2f2f2;
+}
 .sub-btn {
   font-size: 16px;
   display: block;
@@ -998,4 +1001,37 @@ body {
   width: 100%;
   height: 200px;
   object-fit: cover;
+}
+
+.users-read {
+  width: 100%;
+  display: block;
+  margin-top: 200px;
+  padding: 20px;
+  background-color: #1c3425;
+  color: white;
+}
+
+.users-read ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.users-read ul li p {
+  display: inline-block;
+  margin-right: 20px;
+  width: 250px;
+}
+.users-read ul button {
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(to right, #6b7c65, #7a8f74, #7ea570, #80af6f, #6fa75b);
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 6px;
 }
